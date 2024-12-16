@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VA's Blueprint Masterclass</title>
+    <style>
+        :root {
+            --lavender: #4169e1;
+            --rose-gold: #E8B4B8;
+            --text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--lavender);
+            font-family: 'Montserrat', sans-serif;
+            color: #333;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 150px;
+            z-index: 100;
+        }
+
+        /* Webinar Info Section */
+        .webinar-info {
+            max-width: 800px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: var(--rose-gold);
+            text-shadow: 
+                2px 2px 4px rgba(255, 255, 255, 0.5),
+                -2px -2px 4px rgba(0, 0, 0, 0.1);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-bottom: 30px;
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 40px;
+            text-shadow: var(--text-shadow);
+        }
+
+        .benefits {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(5px);
+        }
+
+        .benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits li {
+            margin: 15px 0;
+            color: white;
+            text-shadow: var(--text-shadow);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .benefits li:nth-child(1) { animation-delay: 0.2s; }
+        .benefits li:nth-child(2) { animation-delay: 0.4s; }
+        .benefits li:nth-child(3) { animation-delay: 0.6s; }
+        .benefits li:nth-child(4) { animation-delay: 0.8s; }
+        .benefits li:nth-child(5) { animation-delay: 1s; }
+
+        /* Registration Form Section */
+        .form-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            color: white;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-shadow: var(--text-shadow);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid var(--rose-gold);
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--royal-blue);
+            box-shadow: 0 0 10px rgba(65, 105, 225, 0.3);
+        }
+
+        .submit-btn {
+            background: var(--rose-gold);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-weight: 600;
+            text-shadow: var(--text-shadow);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .heart-line {
+            width: 100px;
+            height: 2px;
+            background: var(--rose-gold);
+            margin: 20px auto;
+            position: relative;
+            opacity: 0.7;
+        }
+
+        .heart-line::after {
+            content: '♥';
+            position: absolute;
+            right: -15px;
+            top: -10px;
+            color: var(--rose-gold);
+        }
+
+        .decorative-star {
+            position: fixed;
+            color: var(--rose-gold);
+            font-size: 1.5em;
+            opacity: 0.7;
+        }
+
+        .star-1 { top: 20px; left: 20px; }
+        .star-2 { bottom: 20px; right: 20px; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .subtitle { font-size: 1.2em; }
+            .logo { width: 100px; }
+            .form-container { margin: 20px; padding: 30px; }
+            .page-wrapper { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <img src="All Thingz Admin (Logo) (5).png" alt="All Thingz Admin Logo" class="logo">
+        
+        <div class="decorative-star star-1">✧</div>
+        <div class="decorative-star star-2">✧</div>
+
+        <!-- Webinar Info Section -->
+        <div class="webinar-info">
+            <h1>✨ Join The FREE VA's Blueprint Masterclass ✨</h1>
+            <div class="subtitle">Launch Your VA Business Blueprint</div>
+            
+            <div class="heart-line"></div>
+
+            <div class="benefits">
+                <ul>
+                    <li>✧ The 5-step framework to launch your VA business</li>
+                    <li>✧ How to attract your ideal clients</li>
+                    <li>✧ My proven pricing strategy that sells</li>
+                    <li>✧ The exact tools I use to run a successful VA business</li>
+                    <li>✧ BONUS: Special offer for live attendees only!</li>
+                </ul>
+            </div>
+            <form name="registration" method="POST" data-netlify="true">
+             <form action="https://formsubmit.co/hello@allthingzadmin.com" method="POST">
+            <!-- Honeypot -->
+            <input type="text" name="_honey" style="display: none;">
+            
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Success Page -->
+            <input type="hidden" name="_next" value="https://all-thingz-admin.github.io/Thanks_webinar/">
+
+            <!-- Form Title -->
+            <h1 class="page-title">VA Blueprint Masterclass Registration</h1>
+            <div class="heart-line"></div>
+
+            <!-- Form Fields -->
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number (Optional)</label>
+                <input type="tel" name="phone" id="phone">
+            </div>
+
+            <div class="form-group">
+                <label for="journey">Where are you in your VA journey?</label>
+                <select name="journey" id="journey" required>
+                    <option value="">Select an option</option>
+                    <option value="Just Starting">Just Starting Out</option>
+                    <option value="Building">Building My Business</option>
+                    <option value="Scaling">Ready to Scale</option>
+                    <option value="Experienced">Experienced VA</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">SAVE MY SPOT</button>
+        </form>
+    </div>
+</body>
+</html>
